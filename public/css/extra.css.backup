@@ -1,0 +1,32 @@
+/* 更改posts文章为卡片样式 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.grid-item {
+  aspect-ratio: 1 / 1; /* 💡 这是关键，让卡片保持正方形 */
+  background-color: #fff;
+  padding: 1rem;
+/*  border-radius: 10px; */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  display: flex;                /* 💡 让内容居中 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px);
+}
+
+.grid-item img {
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+

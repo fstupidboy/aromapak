@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Fun on My New Hugo Site</title>
+    <link>http://localhost:1313/tags/fun/</link>
+    <description>Recent content in Fun on My New Hugo Site</description>
+    <generator>Hugo -- 0.147.3</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Omg</title>
+      <link>http://localhost:1313/posts/omg/</link>
+      <pubDate>Wed, 14 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/omg/</guid>
+      <description>O my God, it works!</description>
+    </item>
+  </channel>
+</rss>

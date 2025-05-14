@@ -1,0 +1,78 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'PaperMod'
+
+[params]
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  comments = true
+  defaultTheme = "auto"
+
+[params.assets]
+  customCSS = ["css/extra.css"]
+
+#menu:
+#  main:
+#    - identifier: categories
+#      name: categories
+#      url: /categories/
+#      weight: 10
+#    - identifier: tags
+#      name: tags
+#      url: /tags/
+#      weight: 20
+#    - identifier: example
+#      name: example.org
+#      url: https://example.org
+#      weight: 30
+
+[menu]
+ [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Archives"
+    url = "/archives/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "posts"    
+    name = "Posts"
+    url = "/posts/"
+    weight = 4
+
+  [[menu.main]]
+    parent = "posts"
+    name = "Linux"
+    url = "/posts/linux/"
+    pre = '<i class="fa-solid fa-code"></i>'
+    weight = 99
+
+  [[menu.main]]
+    parent = "posts"
+    name = "Sub1"
+    url = "/posts/sub1/"
+    weight = 2
+
+  [[menu.main]]
+    parent = "posts"
+    name = "Sub2"
+    url = "/posts/sub2/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Products"
+    url = "/products/"
+    weight = 5

@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <main class="main grid-main">
+    <div class="grid-container">
+      {{ range .Paginator.Pages }}
+        <div class="grid-item">
+          <a href="{{ .Permalink }}">
+            {{ with .Params.images }}
+              <img class="card-img" src="{{ index . 0 }}" alt="{{ $.Title }}">
+            {{ end }}
+          </a>
+          <div class="card-content">
+            <p class="post-date">{{ .Date.Format "2006-01-02" }}</p>
+            <h2><a class="post-title" href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="post-summary">
+              {{ .Summary }}
+              <a class="read-more-link" href="{{ .Permalink }}">Read more...</a>
+            </p>
+            {{ with .Params.tags }}
+              <p class="post-tags">
+                {{ range . }}
+                  <span class="tag">#{{ . }}</span>
+                {{ end }}
+              </p>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+
+    <div class="pagination">
+      {{ template "_internal/pagination.html" . }}
+    </div>
+  </main>
+{{ end }}
+
